@@ -4,8 +4,8 @@ resource "aws_key_pair" "key_pair" {
 }
 
 resource "aws_instance" "app_server" {
-  ami           = "ami-0275c66a9dce7dd1e"
-  instance_type = "t2.micro"
+  ami           = "ami-0b7e671694d4feeb0"
+  instance_type = "t2.large"
   key_name      = aws_key_pair.key_pair.key_name
   tags = {
     Name = "DB Server"
